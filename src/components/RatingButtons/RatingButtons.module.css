@@ -1,0 +1,19 @@
+.ratingButton {
+  background-color: var(--very-dark-blue);
+  color: var(--medium-grey);
+  padding: 12px;
+  border-radius: 20px;
+  border-style: none;
+  margin: 12px;
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.ratingButton:hover {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.ratingButton:active {
+  background-color: var(--light-grey);
+}
