@@ -1,22 +1,45 @@
 .ratingBox {
   background-color: var(--dark-blue);
   border-radius: 20px;
-  padding: 24px;
+  padding: 34px;
+  width: 18%;
 }
 
 .ratingIcon {
   background-color: var(--very-dark-blue);
-  padding: 12px;
-  border-radius: 20px;
+  padding: 17px;
+  border-radius: 34px;
 }
 
-.header {
+.ratingBoxHeader {
   font-size: 24px;
   font-weight: bold;
   color: var(--white);
 }
 
-.text {
+.ratingBoxText {
   color: var(--medium-grey);
-  font-weight: 600;
+  font-weight: 500;
+}
+
+.submitButton {
+  cursor: pointer;
+  background-color: var(--primary);
+  border-style: none;
+  border-radius: 24px;
+  font-weight: 500;
+  font-size: 16px;
+  width: 100%;
+  padding: 12px 0px;
+  font-family: 'Montserrat', sans-serif;
+  color: var(--white);
+}
+
+.submitButton:not([disabled]):hover {
+  background-color: var(--white);
+  color: var(--primary);
+}
+
+.submitButton:disabled {
+  cursor: not-allowed;
 }
