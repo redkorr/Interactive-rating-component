@@ -2,7 +2,7 @@
   background-color: var(--dark-blue);
   border-radius: 20px;
   padding: 34px;
-  width: 18%;
+  max-width: 350px;
 }
 
 .ratingIcon {
