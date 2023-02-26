@@ -1,14 +1,32 @@
 import React from 'react';
 import styles from './RatingButtons.module.css';
 
-function RatingButtons() {
+interface Props {
+  onChange: (index: number) => void;
+  selectedIndex: number;
+}
+
+function RatingButtons({
+  onChange,
+  selectedIndex,
+}: Props): React.ReactElement<Props> {
+  console.log('selectedIndex', selectedIndex);
+
   return (
     <div className={styles.rating}>
-      <button className={styles.ratingButton}>1</button>
-      <button className={styles.ratingButton}>2</button>
-      <button className={styles.ratingButton}>3</button>
-      <button className={styles.ratingButton}>4</button>
-      <button className={styles.ratingButton}>5</button>
+      {[...Array(5)].map((_, index) => (
+        <button
+          key={index}
+          className={`${styles.ratingButton} ${
+            selectedIndex === index + 1 ? styles.clicked : ''
+          }`}
+          onClick={() => {
+            onChange(index + 1);
+          }}
+        >
+          {index + 1}
+        </button>
+      ))}
     </div>
   );
 }
